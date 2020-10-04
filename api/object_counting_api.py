@@ -324,6 +324,11 @@ def object_counting(input_video, detection_graph, category_index, is_color_recog
 
 def object_counting_webcam(detection_graph, category_index, is_color_recognition_enabled):
 
+     # fourcc = cv2.VideoWriter_fourcc(*'H264')
+        # fourcc = cv2.VideoWriter_fourcc('V','P','0','9')
+        # output_movie = cv2.VideoWriter('the_output.webm', fourcc, 20.0, (width, height))
+
+
         total_passed_vehicle = 0
         speed = "waiting..."
         direction = "waiting..."
@@ -347,7 +352,7 @@ def object_counting_webcam(detection_graph, category_index, is_color_recognition
             detection_classes = detection_graph.get_tensor_by_name('detection_classes:0')
             num_detections = detection_graph.get_tensor_by_name('num_detections:0')
 
-            cap = cv2.VideoCapture(0)
+            cap = cv2.VideoCapture('rtsp://admin:A123abcd%40%23@123.21.216.20:554/cam/realmonitor?channel=1&subtype=0')
             (ret, frame) = cap.read()
 
             # for all the frames that are extracted from input video
@@ -405,8 +410,9 @@ def targeted_object_counting(input_video, detection_graph, category_index, is_co
         width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
         fps = int(cap.get(cv2.CAP_PROP_FPS))
 
-        fourcc = cv2.VideoWriter_fourcc(*'MPEG')
-        output_movie = cv2.VideoWriter('the_output.avi', fourcc, 20.0, (width, height))
+        # fourcc = cv2.VideoWriter_fourcc(*'H264')
+        fourcc = cv2.VideoWriter_fourcc('V','P','0','9')
+        output_movie = cv2.VideoWriter('the_output.webm', fourcc, 20.0, (width, height))
 
         total_passed_vehicle = 0
         speed = "waiting..."

@@ -1,0 +1,15 @@
+{
+  "name": "mat-admin",
+  "version": "4.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akveo/ngx-admin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akveo/ngx-admin/issues"
+  },
+  "scripts": {
+    "run": "test.html && activate tensorflow && python real_time_counting.py"
+  }
+}
