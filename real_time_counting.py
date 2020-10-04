@@ -11,7 +11,7 @@ import tensorflow as tf
 from utils import backbone
 from api import object_counting_api
 
-input_video = "rtsp://admin:A123abcd%40%23@123.21.170.29:554/cam/realmonitor?channel=1&subtype=0"
+input_video = "rtsp://admin:A123abcd%40%23@123.21.216.20:554/cam/realmonitor?channel=1&subtype=0"
 # "rtsp://123.21.170.29:554/cam/realmonitor?channel=1&subtype=0"
 # "rtsp://admin:A123abcd%40%23@123.21.170.29:554/cam/realmonitor?channel=1&subtype=0"
 

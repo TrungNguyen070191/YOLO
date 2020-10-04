@@ -8,6 +8,9 @@ import tensorflow as tf
 import csv
 import cv2
 import numpy as np
+import os
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 from utils import visualization_utils as vis_util
 
 # Variables
