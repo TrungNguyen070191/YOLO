@@ -13,4 +13,5 @@ open cmd run following command
 
 after install
 open terminal inside project and run cmd
-- test.html && activate tensorflow && python real_time_counting.py
+- Type 'npm run run' => It will open web browser and click play video.
+<!-- - test.html && activate tensorflow && python real_time_counting.py -->
