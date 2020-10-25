@@ -1,60 +1,16 @@
-# Yolov5 + Deep Sort with PyTorch
+Lên trang chủ của Anaconda, tải bản cập nhật mới nhất
+https://docs.conda.io/en/latest/miniconda.html
+Lưu ý trong quá trình cài đặt, nhớ chọn 2 option này để tạo biến môi trường trong windown.
 
-[![HitCount](http://hits.dwyl.com/{mikel-brostrom}/{Yolov5_DeepSort_Pytorch}.svg)](http://hits.dwyl.com/{mikel-brostrom}/{Yolov5_DeepSort_Pytorch})
-
-
-![](Town.gif)
-
-## Introduction
-
-This repository contains a moded version of PyTorch YOLOv5 (https://github.com/ultralytics/yolov5). It filters out every detection that is not a person. The detections of persons are then passed to a Deep Sort algorithm (https://github.com/ZQPei/deep_sort_pytorch) which tracks the persons. The reason behind the fact that it just tracks persons is that the deep association metric is trained on a person ONLY datatset.
-
-## Description
-
-The implementation is based on two papers:
-
-- Simple Online and Realtime Tracking with a Deep Association Metric
-https://arxiv.org/abs/1703.07402
-- YOLOv4: Optimal Speed and Accuracy of Object Detection
-https://arxiv.org/pdf/2004.10934.pdf
-
-## Requirements
-
-Python 3.8 or later with all requirements.txt dependencies installed, including torch>=1.6. To install run:
-
-`pip install -U -r requirements.txt`
-
-All dependencies are included in the associated docker images. Docker requirements are: 
-- `nvidia-docker`
-- Nvidia Driver Version >= 440.44
-
-## Before you run the tracker
-
-Github block pushes of files larger than 100 MB (https://help.github.com/en/github/managing-large-files/conditions-for-large-files). Hence you need to download two different weights: the ones for yolo and the ones for deep sort
-
-- download the yolov5 weight from https://drive.google.com/drive/folders/1Drs_Aiu7xx6S-ix95f9kNsA6ueKRpN2J. Place the downlaoded `.pt` file under `yolov5/weights/`
-- download the deep sort weights from https://drive.google.com/drive/folders/1xhG0kRH1EX5B9_Iz8gQJb7UNnn_riXi6. Place ckpt.t7 file under`deep_sort/deep/checkpoint/`
-
-## Tracking
-
-Tracking can be run on most video formats
-
-```bash
-python3 track.py --source ...
-```
-
-- Video:  `--source file.mp4`
-- Webcam:  `--source 0`
-- RTSP stream:  `--source rtsp://170.93.143.139/rtplive/470011e600ef003a004ee33696235daa`
-- HTTP stream:  `--source http://wmccpinetop.axiscam.net/mjpg/video.mjpg`
-
-MOT compliant results can be saved to `inference/output` by 
-
-```bash
-python3 track.py --source ... --save-txt
-```
-
-## Other information
-
-For more detailed information about the algorithms and their corresponding lisences used in this project access their official github implementations.
-
+Mở Command Prompt or Windown PowerShell trong thư mục code chạy các lệnh sau:
+- pip install -U -r requirements.txt
+- pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+Để cài đặt tất cả các thư viện cần thiết được nêu ở đầu mục 3.3.2
+* Sau khi cài đặt tất cả:
+Để chạy app với đầu vào là link RTSP
+- python track.py --save-txt
+Để chạy app với đầu vào là video
+- python track.py --source test1.mp4 --save-txt
+Với test1.mp4 là tên video bỏ vào cùng đường dẫn với file track.py trong project.
+Tắt màn hình hiển thị video bằng phím tắt ‘Q’ để lưu thông tin output vào file.
+Sau khi chạy hoàn tất, thông tin thu thập được sẽ được lưu trong đường dẫn
