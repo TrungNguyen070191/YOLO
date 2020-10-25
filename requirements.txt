@@ -1,5 +1,13 @@
-numpy
-scipy
-scikit-image
-tensorflow==1.5.0
-opencv-python
+# pip install -U -r requirements.txt
+Cython
+matplotlib>=3.2.2
+numpy>=1.18.5
+opencv-python>=4.1.2
+pillow
+easydict
+# pycocotools>=2.0
+PyYAML>=5.3
+scipy>=1.4.1
+tensorboard>=2.2
+# pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+tqdm>=4.41.0

@@ -10,6 +10,7 @@
     "url": "https://github.com/akveo/ngx-admin/issues"
   },
   "scripts": {
-    "run": "test.html && activate tensorflow && python real_time_counting.py"
+    "run": "python track.py --save-txt",
+    "video": "python track.py --source test1.mp4 --save-txt"
   }
 }
