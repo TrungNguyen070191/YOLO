@@ -14,3 +14,7 @@ Mở Command Prompt or Windown PowerShell trong thư mục code chạy các lệ
 Với test1.mp4 là tên video bỏ vào cùng đường dẫn với file track.py trong project.
 Tắt màn hình hiển thị video bằng phím tắt ‘Q’ để lưu thông tin output vào file.
 Sau khi chạy hoàn tất, thông tin thu thập được sẽ được lưu trong đường dẫn
+
+
+download the yolov5 weight from https://drive.google.com/drive/folders/1Drs_Aiu7xx6S-ix95f9kNsA6ueKRpN2J. Place the downlaoded .pt file under yolov5/weights/
+download the deep sort weights from https://drive.google.com/drive/folders/1xhG0kRH1EX5B9_Iz8gQJb7UNnn_riXi6. Place ckpt.t7 file underdeep_sort/deep/checkpoint/
