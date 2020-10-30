@@ -202,9 +202,9 @@ def detect(opt, save_img=False):
                             if int(bbox_top) <= 100:
                                 peopleIn +=1
 
-                        with open(txt_path, 'a') as f:
-                            f.write(('%g ' * 10 + '\n') % (frame_idx, identity, bbox_left,
-                                    bbox_top, bbox_w, bbox_h, -1, -1, -1, -1))  # label format
+                        # with open(txt_path, 'a') as f:
+                        #     f.write(('%g ' * 10 + '\n') % (frame_idx, identity, bbox_left,
+                        #             bbox_top, bbox_w, bbox_h, -1, -1, -1, -1))  # label format
                             # f.write(('%g ' * 3 + '\n') % (identity, bbox_left, bbox_top))  # label format
                             # resultText = str(identity) + '-' + str(bbox_top)
                             # f.write(resultText + '\n')  # label format
